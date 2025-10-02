@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Igreja Evangélica Assembleia de Deus em Tefé, Amazonas - Uma comunidade de fé, amor e esperança. Cultos, eventos e ações sociais." />
+    <meta name="keywords" content="igreja, Tefé, Amazonas, cultos, batismo, ação social" />
+    <meta name="author" content="IEADBAM Tefé" />
+    
+<meta property="og:title" content="IEADBAM Tefé - Igreja Evangélica Assembleia de Deus">
+<meta property="og:description" content="Uma comunidade de fé, amor e esperança em Tefé, Amazonas">
+<meta property="og:image" content="./pexels-shelaghmurphy-1666816.jpg">    <title>IEADBAM Tefé</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2e8b57; /* Verde Amazônia */
+        --primary-light: #3cb371;
+        --primary-dark: #1f6b48;
+        --accent: #ffd700; /* Dourado para destaque */
+        --light: #ffffff;
+        --dark: #1a3c2b;
+        --gray: #f5f5f5;
+        --text: #333333;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--light);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Header e Navegação */
+      header {
+        background-color: var(--primary);
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        color: var(--light);
+      }
+
+      .logo i {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .logo span {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        padding: 0.5rem 0.8rem;
+        border-radius: 4px;
+      }
+
+      nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 8rem 2rem 4rem;
+        text-align: center;
+        background: linear-gradient(rgba(0.5, 0, 0, 0), rgba(46, 139, 87, 0.8)),
+          url("./pexels-shelaghmurphy-1666816.jpg");
+        background-size: cover;
+        background-position: center 50%;
+        color: var(--light);
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      /* Botões */
+      .btn {
+        display: inline-block;
+        background-color: var(--light);
+        color: var(--primary);
+        padding: 0.8rem 1.8rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--light);
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn:hover {
+        background-color: transparent;
+        color: var(--light);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary);
+        color: var(--light);
+      }
+
+      .btn-accent {
+        background-color: var(--accent);
+        border-color: var(--accent);
+        color: var(--dark);
+      }
+
+      .btn-accent:hover {
+        background-color: transparent;
+        color: var(--dark);
+      }
+
+      /* Seções */
+      .section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section h2 {
+        text-align: center;
+        color: var(--primary);
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .content-card {
+        background: var(--light);
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .content-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .content-card i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      /* Destaques */
+      .highlights {
+        padding: 4rem 2rem;
+        background-color: var(--gray);
+      }
+
+      .highlights h2 {
+        text-align: center;
+        color: var(--primary);
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+      }
+
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .highlight-card {
+        background: var(--light);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .highlight-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .highlight-img {
+        height: 180px;
+        background-color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 2.5rem;
+      }
+
+      .highlight-content {
+        padding: 1.5rem;
+      }
+
+      .highlight-content h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .highlight-content p {
+        margin-bottom: 1.5rem;
+        color: var(--text);
+      }
+
+      /* Eventos */
+      .event-card {
+        background: var(--light);
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .event-card h3 {
+        color: margin-bottom 0.5rem;
+      }
+
+      /* Modal/Popup */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+        overflow-y: auto;
+        padding: 2rem;
+      }
+
+      .modal-content {
+        background-color: var(--light);
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 800px;
+        position: relative;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: var(--text);
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+
+      .modal-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .modal-header h2 {
+        color: var(--primary);
+        font-size: 2rem;
+      }
+
+      .action-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .action-card {
+        background: var(--gray);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .action-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .action-img {
+        height: 180px;
+        background-color: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 2rem;
+      }
+
+      .action-content {
+        padding: 1.5rem;
+      }
+
+      .action-content h3 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      /* Galeria */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .gallery-item {
+        height: 200px;
+        background-color: var(--primary-light);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+
+      /* Batismo */
+      .baptism-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .baptism-text {
+        padding: 1rem;
+      }
+
+      .baptism-text h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .baptism-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .baptism-image {
+        height: 150px;
+        background-color: var(--primary-light);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary);
+        color: var(--light);
+        text-align: center;
+        padding: 3rem 2rem;
+        margin-top: 3rem;
+      }
+
+      .social-links {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--light);
+        color: var(--primary);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        transform: translateY(-5px);
+        background-color: var(--accent);
+        color: var(--dark);
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          padding: 1rem;
+        }
+
+        .logo {
+          margin-bottom: 1rem;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav ul li {
+          margin: 0.3rem;
+        }
+
+        .hero {
+          padding: 7rem 1rem 3rem;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .highlight-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .baptism-content {
+          grid-template-columns: 1fr;
+        }
+
+        .modal-content {
+          padding: 1.5rem;
+          margin: 1rem;
+        }
+
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .btn {
+          padding: 0.7rem 1.5rem;
+          font-size: 0.9rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .baptism-gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-church"></i>
+        <span>IEADBAM Tefé</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#cultos">Cultos</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>Igreja Evangélica Assembleia de Deus</h1>
+      <p>Uma comunidade de fé, amor e esperança em Tefé, Amazonas</p>
+      <a href="#destaques" class="btn">Conheça nossos trabalhos</a>
+    </section>
+
+    <!-- Destaques -->
+    <section class="highlights" id="destaques">
+      <h2>Nossos Destaques</h2>
+      <div class="highlight-grid">
+        <div class="highlight-card" onclick="openModal('acao-social')">
+          <div
+            class="highlight-img"
+            style="
+              background-image: url('./agua.jpg');
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+          <div class="highlight-content">
+            <h3>Ação Social</h3>
+            <p>
+              Conheça nossos projetos de assistência à comunidade carente de
+              Tefé.
+            </p>
+          </div>
+        </div>
+
+        <div class="highlight-card" onclick="openModal('santo-role')">
+          <div
+            class="highlight-img"
+            style="
+              background-image: url(./Just\ Game.png);
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+          <div class="highlight-content">
+            <h3>Santo Rolê</h3>
+            <p>Eventos especiais para jovens com fé e diversão!</p>
+          </div>
+        </div>
+
+        <div class="highlight-card" onclick="openModal('batismo')">
+          <div
+            class="highlight-img"
+            style="
+              background-image: url(./batismo.jpg);
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+          <div class="highlight-content">
+            <h3>Batismo</h3>
+            <p>Celebre sua nova vida em Cristo através do batismo.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card" onclick="openModal('galeria')">
+          <div
+            class="highlight-img"
+            style="
+              background-image: url(./pexels-rquiros-2330141.jpg);
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+          <div class="highlight-content">
+            <h3>Galeria</h3>
+            <p>Veja momentos especiais da nossa comunidade de fé.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cultos -->
+    <section class="section" id="cultos">
+      <h2>Nossos Cultos</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <i class="fas fa-users"></i>
+          <h3>Culto da Família</h3>
+          <p>Domingo às 19h</p>
+          <p>Um momento de adoração e união para toda a família.</p>
+        </div>
+
+        <div class="content-card">
+          <i class="fas fa-book"></i>
+          <h3>Escola Biblica Dominical</h3>
+          <p>Domingo às 08:00hr</p>
+          <p>Estudo bíblico</p>
+        </div>
+
+        <div class="content-card">
+          <i class="fas fa-bible"></i>
+          <h3>Culto de Ensino</h3>
+          <p>Terça-feira às 19:30h</p>
+          <p>Estudo bíblico profundo para crescimento espiritual.</p>
+        </div>
+
+        <div class="content-card">
+          <i class="fas fa-pray"></i>
+          <h3>Culto de Oração</h3>
+          <p>Quinta-feira às 19h</p>
+          <p>Momento especial de intercessão e comunhão com Deus.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section class="section" id="eventos">
+      <h2>Próximos Eventos</h2>
+
+      <div class="event-card">
+        <h3>Santo Rolê Gamer</h3>
+        <p><strong>Data:</strong> 11 de Outubro de 2025</p>
+        <p><strong>Horário:</strong> 19:00 - 22:00</p>
+        <p><strong>Local:</strong> Sede da IEADBAM Tefé</p>
+        <a
+          href="https://wa.me/5592981752241?text=Quero%20me%20inscrever%20no%20Santo%20Rol%C3%AA%20Gamer"
+          class="btn btn-accent"
+          >Inscrever-se</a
+        >
+      </div>
+
+      <div class="event-card">
+        <h3>Culto dia das crianças</h3>
+        <p><strong>Data:</strong> 12 de Outubro de 2025</p>
+        <p><strong>Horário:</strong> 19:00 - 22:00</p>
+        <p><strong>Local:</strong> Sede da IEADBAM Tefé</p>
+        <a
+          href="https://wa.me/5592981752241?text=Quero%20me%20inscrever%20no%20Santo%20Rol%C3%AA%20Cine"
+          class="btn btn-accent"
+          >Inscrever-se</a
+        >
+      </div>
+
+      <div class="event-card">
+        <h3>Batismo</h3>
+        <p><strong>Data:</strong> 04 de Outubro de 2025</p>
+        <p><strong>Horário:</strong> 8:00 - 10:00</p>
+        <p><strong>Local:</strong> Sede da IEADBAM Tefé</p>
+        <a
+          href="https://wa.me/5592981752241?text=Quero%20me%20inscrever%20na%20Confer%C3%AAncia%20de%20Jovens"
+          class="btn btn-accent"
+          >Inscrever-se</a
+        >
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato">
+      <h2>Entre em Contato</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Endereço</h3>
+          <p>Rua Marechal Deodoro , 673, Centro</p>
+          <p>Tefé, AM</p>
+        </div>
+
+        <div class="content-card">
+          <i class="fas fa-phone"></i>
+          <h3>Telefone</h3>
+          <p>(92) 98175-2241</p>
+        </div>
+
+        <div class="content-card">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp</h3>
+          <p>Clique abaixo para conversar conosco</p>
+          <a
+            href="https://wa.me/5592981752241?text=Olá,%20gostaria%20de%20mais%20informações"
+            class="btn"
+            >Enviar mensagem</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Ação Social -->
+    <div id="modal-acao-social" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal('acao-social')">
+          &times;
+        </button>
+        <div class="modal-header">
+          <h2>Ação Social</h2>
+          <p>Nossos projetos de transformação social em Tefé</p>
+        </div>
+
+        <div class="action-grid">
+          <div
+            class="action-card"
+            onclick="openActionDetail('aguas-purificadoras')"
+          >
+            <div
+              class="action-img"
+              style="
+                background-image: url(./agua1.jpg);
+                background-size: 100%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Águas Purificadoras</h3>
+              <p>
+                Distribuição de filtros de água para comunidades ribeirinhas.
+              </p>
+            </div>
+          </div>
+
+          <div class="action-card">
+            <div
+              class="action-img"
+              style="
+                background-image: url(./rancho.jpg);
+                background-size: 100%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Alimentando Vidas</h3>
+              <p>
+                Distribuição de cestas básicas para famílias em vulnerabilidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="action-card">
+            <div
+              class="action-img"
+              style="
+                background-image: url(./programa.jpg);
+                background-size: 100%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Escola de Programação</h3>
+              <p>Aulas de programação.!! BETA-TESTE EM BREVE!!</p>
+            </div>
+          </div>
+
+          <div class="action-card">
+            <div
+              class="action-img"
+              style="
+                background-image: url(./ingles.jpg);
+                background-size: 100%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Escola de idiomas</h3>
+              <p>Aulas de inglês para jovens e adultos. EM BREVE</p>
+            </div>
+          </div>
+
+          <div class="action-card">
+            <div
+              class="action-img"
+              style="
+                background-image: url(./musica.jpg);
+                background-size: 100%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Escola de Música Rei Davi</h3>
+              <p>
+                Aulas de instrumentos e canto para crianças, adolescentes e
+                adultos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Detalhe Ação Social -->
+    <div id="modal-aguas-purificadoras" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal('aguas-purificadoras')">
+          &times;
+        </button>
+        <div class="modal-header">
+          <h2>Águas Purificadoras</h2>
+          <p>Ação social da IEADBAM em parceria com Resgatando Vidas</p>
+        </div>
+
+        <div
+          class="action-img"
+          style="
+            background-image: url(./agua.jpg);
+            background-size: 100%;
+            background-position: center;
+          "
+        ></div>
+
+        <div class="baptism-text">
+          <p>
+            O projeto <strong>Águas Purificadoras</strong> é uma iniciativa da
+            Igreja IEADBAM em conjunto com a organização Resgatando Vidas e
+            Missão do Céu que distribui filtros de água para comunidades
+            ribeirinhas da região de Tefé - Amazonas.
+          </p>
+
+          <p>
+            Muitas famílias que vivem às margens dos rios consomem água
+            diretamente dos rios, o que representa sérios riscos à saúde devido
+            à contaminação por parasitas, bactérias e produtos químicos. Beber
+            água contaminada pode causar doenças como diarreia, hepatite A,
+            cólera e infecções por vermes.
+          </p>
+
+          <p>
+            Nossa ação visa proporcionar qualidade de vida e saúde para essas
+            populações vulneráveis, trazendo não apenas água potável, mas também
+            esperança e cuidado através do amor de Cristo.
+          </p>
+
+          <p>
+            <!-- Até agora, já distribuímos mais de 500 filtros, beneficiando
+            diretamente mais de 2.000 pessoas em 15 comunidades diferentes. -->
+            Se você deseja apoiar esse projeto ou saber mais entre em contato
+            conosco
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Santo Rolê -->
+    <div id="modal-santo-role" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal('santo-role')">
+          &times;
+        </button>
+        <div class="modal-header">
+          <h2>Santo Rolê</h2>
+          <p>Eventos especiais para jovens com fé e diversão</p>
+        </div>
+
+        <p style="text-align: center; margin-bottom: 2rem">
+          Clique no botão abaixo para ser direcionado ao site oficial do Santo
+          Rolê
+        </p>
+
+        <div style="text-align: center">
+          <a
+            href="https://melkylop.github.io/SantoRol-/"
+            target="_blank"
+            class="btn btn-accent"
+            >Acessar Site do Santo Rolê</a
+          >
+        </div>
+
+        <div class="action-grid" style="margin-top: 2rem">
+          <div class="action-card">
+            <div
+              class="action-img"
+              style="
+                background-image: url(./Just\ Game.png);
+                background-size: 79.5%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Santo Rolê Gamer</h3>
+              <p>Evento mensal com jogos, competições e mensagens de fé.</p>
+            </div>
+          </div>
+
+          <div class="action-card">
+            <div
+              class="action-img"
+              style="
+                background-image: url(./Cinema.png);
+                background-size: 80%;
+                background-position: center;
+              "
+            ></div>
+            <div class="action-content">
+              <h3>Santo Rolê Cine</h3>
+              <p>
+                Noites de cinema com filmes que inspiram e trazem reflexões.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Batismo -->
+    <div id="modal-batismo" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal('batismo')">
+          &times;
+        </button>
+        <div class="modal-header">
+          <h2>Batismo</h2>
+          <p>Celebre sua nova vida em Cristo</p>
+        </div>
+
+        <div class="baptism-content">
+          <div class="baptism-text">
+            <h3>O que é o Batismo?</h3>
+            <p>
+              O batismo é uma ordenança de Jesus Cristo que simboliza a morte
+              para o pecado e a ressurreição para uma nova vida em Cristo. É uma
+              declaração pública de fé e um passo de obediência após a decisão
+              de seguir a Jesus.
+            </p>
+
+            <p>
+              "Portanto, vão e façam discípulos de todas as nações, batizando-os
+              em nome do Pai e do Filho e do Espírito Santo." - Mateus 28:19
+            </p>
+
+            <p>
+              Se você já recebeu Jesus como seu Salvador pessoal, o batismo é o
+              próximo passo em sua jornada de fé. Entre em contato conosco para
+              saber mais sobre nossas próximas cerimônias de batismo.
+            </p>
+
+            <a
+              href="https://wa.me/5592981752241?text=A%20paz%20do%20Senhor!%20Desejo%20ser%20batizado%20e%20gostaria%20de%20mais%20informações"
+              target="_blank"
+              class="btn"
+              >Quero ser batizado</a
+            >
+          </div>
+
+          <div class="baptism-gallery">
+            <div class="baptism-image">
+              <i class="fas fa-water"></i>
+            </div>
+            <div class="baptism-image">
+              <i class="fas fa-smile"></i>
+            </div>
+            <div class="baptism-image">
+              <i class="fas fa-church"></i>
+            </div>
+            <div class="baptism-image">
+              <i class="fas fa-hands"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Galeria -->
+    <div id="modal-galeria" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal('galeria')">
+          &times;
+        </button>
+        <div class="modal-header">
+          <h2>Galeria</h2>
+          <p>Momentos especiais da nossa comunidade</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <i class="fas fa-church"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-worship"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-music"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-bible"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-pray"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <div class="gallery-item">
+            <i class="fas fa-baptism"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>IEADBAM Tefé © 2025 | Uma Igreja de fé, amor e transformação</p>
+      <div class="social-links">
+        <a href="https://instagram.com/ieadbamtefe" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/ieadbamtefe" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://youtube.com/ieadbamtefe" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Funções para abrir e fechar modais
+      function openModal(modalId) {
+        document.getElementById(`modal-${modalId}`).style.display = "block";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(`modal-${modalId}`).style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function openActionDetail(actionId) {
+        closeModal("acao-social");
+        setTimeout(() => {
+          openModal(actionId);
+        }, 300);
+      }
+
+      // Fechar modal ao clicar fora do conteúdo
+      window.onclick = function (event) {
+        const modals = document.getElementsByClassName("modal");
+        for (let i = 0; i < modals.length; i++) {
+          if (event.target == modals[i]) {
+            modals[i].style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        }
+      };
+
+      // Smooth scrolling para links de navegação
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
