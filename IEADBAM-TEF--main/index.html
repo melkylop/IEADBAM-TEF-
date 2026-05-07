@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal oficial da IEADBAM Tefé - Amazonas. Uma igreja comprometida com o evangelho, ação social e transformação de vidas no coração da Amazônia.">
+    <meta name="keywords" content="IEADBAM, Tefé, Amazonas, Igreja, Evangelho, Missão, Ação Social, Escola de Davi">
+    <meta name="author" content="IEADBAM Tefé">
+    
+    <!-- SEO Masterizado -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ieadbamtefe.com.br/">
+    <meta property="og:title" content="IEADBAM Tefé | Fé, Amor e Transformação Social no Amazonas">
+    <meta property="og:description" content="Conheça nossos projetos sociais, agenda de eventos e junte-se à nossa comunidade em Tefé, Amazonas.">
+    <meta property="og:image" content="https://ieadbamtefe.com.br/fotos/logo_topo.jpeg">
+
+    <title>IEADBAM Tefé | Fé, Amor e Transformação Social no Amazonas</title>
+    
+    <!-- Performance & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="fotos/igrejalogo.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- JSON-LD Structured Data (Google Knowledge Graph) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ReligiousOrganization",
+      "name": "IEADBAM Tefé",
+      "url": "https://ieadbamtefe.com.br/",
+      "logo": "https://ieadbamtefe.com.br/fotos/igrejalogo.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Marechal Deodoro, 673",
+        "addressLocality": "Tefé",
+        "addressRegion": "AM",
+        "postalCode": "69470-000",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-97-98175-2241",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ieadbam.tefe/"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#home" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header id="header">
+        <div class="logo">
+            <span>IEADBAM TEFÉ</span>
+        </div>
+        
+        <!-- Botão Menu Mobile -->
+        <button class="mobile-menu-btn" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="acoes-sociais.html">Ações Sociais</a>
+            <a href="doacoes.html">Doações</a>
+            <a href="javascript:void(0)" onclick="openContactModal()">Contato</a>
+        </nav>
+        <div class="header-actions">
+            <a href="doacoes.html" class="btn btn-accent">Como Ajudar?</a>
+        </div>
+    </header>
+
+    <!-- Modal de Contato com Acessibilidade -->
+    <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="contact-modal">
+            <button class="close-modal" onclick="closeContactModal()" aria-label="Fechar Modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 id="modal-title">Contato</h2>
+            
+            <div class="contact-info-list">
+                <a href="https://www.instagram.com/ieadbam.tefe/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <span>Instagram</span>
+                            <strong>@ieadbam.tefe</strong>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://wa.me/5597981752241" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span>WhatsApp</span>
+                            <strong>(97) 98175-2241</strong>
+                        </div>
+                    </div>
+                </a>
+                <a href="mailto:contato@ieadbamtefe.com.br" style="text-decoration: none;">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>E-mail</span>
+                            <strong>contato@ieadbamtefe.com.br</strong>
+                        </div>
+                    </div>
+                </a>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span>Endereço</span>
+                        <strong>Rua Marechal Deodoro, 673, Centro, Tefé - AM</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-social">
+                <a href="https://www.instagram.com/ieadbam.tefe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5597981752241" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:contato@ieadbamtefe.com.br" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <h1>Fé, Amor e Transformação</h1>
+        <p>Conheça a nossa comunidade dedicada a servir e levar a palavra em Tefé, Amazonas.</p>
+        <div class="hero-btns" style="margin-top: 30px; display: flex; gap: 40px;">
+            <a href="acoes-sociais.html" class="btn btn-primary">Missão</a>
+            <a href="eventos.html" class="btn btn-outline">Eventos</a>
+        </div>
+    </section>
+
+    <section id="quem-somos">
+        <div class="section-header">
+            <h2>Quem Somos</h2>
+            <p>Uma igreja comprometida com o evangelho e o bem-estar social em Tefé.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-bible"></i>
+                <h3>Missão</h3>
+                <p>Anunciar o evangelho e promover a paz em toda a região de Tefé.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-eye"></i>
+                <h3>Visão</h3>
+                <p>Ser uma referência de amor e transformação espiritual e social.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-heart"></i>
+                <h3>Valores</h3>
+                <p>Fé, integridade, comunhão e serviço ao próximo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <div class="section-header">
+            <h2>Nossa Galeria</h2>
+            <p>Momentos marcantes da nossa comunidade em Tefé.</p>
+        </div>
+        <div class="gallery-grid">
+            <img src="fotos/batismo.jpg" alt="Cerimônia de batismo realizada nas águas do Rio Solimões" loading="lazy" decoding="async">
+            <img src="fotos/agua.jpg" alt="Ação social distribuindo filtros de água para famílias ribeirinhas" loading="lazy" decoding="async">
+            <img src="fotos/musica.jpg" alt="Músicos da Escola de Davi durante ensaio no templo" loading="lazy" decoding="async">
+        </div>
+    </section>
+
+    <section id="eventos">
+        <div class="section-header">
+            <h2>Agenda de Eventos</h2>
+            <p>Fique por dentro das nossas atividades e cultos especiais.</p>
+        </div>
+        <div class="calendar-wrapper">
+            <div class="calendar-sidebar">
+                <div class="calendar-header">
+                    <button id="prev-month" class="cal-btn" aria-label="Mês Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="current-month-label">Mês Ano</h3>
+                    <button id="next-month" class="cal-btn" aria-label="Próximo Mês"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="weekday">Dom</div><div class="weekday">Seg</div><div class="weekday">Ter</div>
+                    <div class="weekday">Qua</div><div class="weekday">Qui</div><div class="weekday">Sex</div><div class="weekday">Sáb</div>
+                </div>
+                <div class="calendar-grid" id="calendar-days"></div>
+            </div>
+            <div class="calendar-details">
+                <h4 id="event-date-display" style="color: var(--primary); margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">Eventos do Dia</h4>
+                <div id="month-events-list">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Selecione um dia no calendário para ver a programação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doacoes">
+        <div class="donation-card">
+            <h2>Como Ajudar?</h2>
+            <p>Sua generosidade permite que nossos projetos continuem transformando vidas em Tefé e nas comunidades ribeirinhas.</p>
+            
+            <div class="pix-wrapper">
+                <div class="pix-key-display">
+                    <span id="pix-key-text">financeiro@ieadbamtefe.com.br</span>
+                </div>
+                <button class="btn-copy-pix" onclick="copyPixKey()">
+                    <i class="fas fa-copy"></i> Copiar Chave PIX
+                </button>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 0.9rem; opacity: 0.6;">
+                <i class="fas fa-shield-alt"></i> Transação Segura via PIX
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">IEADBAM TEFÉ</div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="doacoes.html">Doações</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/ieadbam.tefe/" target="_blank" rel="noopener noreferrer" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:contato@ieadbamtefe.com.br" class="gmail" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/5597981752241" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 IEADBAM Tefé. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

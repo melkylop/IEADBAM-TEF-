@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada | IEADBAM Tefé</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .error-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-gray);
+        }
+        .error-container i { font-size: 5rem; color: var(--primary); margin-bottom: 20px; opacity: 0.5; }
+        .error-container h1 { font-size: 3rem; color: var(--primary-dark); margin-bottom: 10px; }
+        .error-container p { font-size: 1.1rem; color: var(--text-muted); max-width: 500px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <i class="fas fa-compass"></i>
+        <h1>Ops! Caminho não encontrado.</h1>
+        <p>A página que você procura pode ter sido movida ou não existe mais. Que tal voltar para o início?</p>
+        <a href="index.html" class="btn btn-primary">Voltar para a Home</a>
+    </div>
+</body>
+</html>

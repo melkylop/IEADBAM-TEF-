@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEADBAM Tefé - Missões</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Merriweather:wght@400;500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2e8b57;
+            --primary-dark: #1e5a38;
+            --accent: #ffd700;
+            --bg: #f8f8f8;
+            --text: #444;
+            --text-light: #777;
+        }
+        body { font-family: 'Merriweather', Georgia, serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .page-header .btn-back {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .page-header .btn-back:hover { background: #fff; color: var(--primary); }
+        
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.05rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+        
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+        }
+        
+        .main-photo {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .article-content { font-size: 1.05rem; color: var(--text); }
+        .article-content p { margin-bottom: 25px; text-align: justify; }
+        
+        .highlight-box { 
+            background: #f0f7f2; 
+            border-left: 4px solid var(--primary); 
+            padding: 25px; 
+            margin: 30px 0; 
+            border-radius: 0 10px 10px 0; 
+        }
+        .highlight-box h4 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; }
+        .highlight-box ul { margin-left: 20px; }
+        .highlight-box li { margin-bottom: 10px; }
+        
+        .quote-block { 
+            font-family: 'Playfair Display', serif; 
+            font-style: italic; 
+            font-size: 1.2rem; 
+            color: var(--primary); 
+            text-align: center; 
+            padding: 30px; 
+            margin: 40px 0; 
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .donation-call { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+            color: #fff; 
+            padding: 40px; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin: 40px 0; 
+        }
+        .donation-call h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; }
+        .donation-call p { text-align: center; margin-bottom: 10px; }
+        .donation-call .price { font-size: 1.8rem; font-weight: 700; color: var(--accent); display: block; margin: 15px 0; }
+        
+        .btn-cta {
+            background: #fff;
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+
+        footer { background: var(--bg-dark); color: white; padding: 40px 20px; text-align: center; }
+        .footer-content { max-width: 800px; margin: 0 auto; }
+        .footer-logo { font-family: 'Cinzel', serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--accent); }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .social-icons { display: flex; justify-content: center; gap: 18px; margin: 25px 0; }
+        .social-icons a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+        .footer-copyright { font-size: 0.85rem; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px; }
+        
+        @media (max-width: 600px) {
+            .page-header { padding: 80px 20px 40px; }
+            .page-header h1 { font-size: 1.8rem; }
+            .article-card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <a href="acoes-sociais.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <h1>Água Pura: O Bem Mais Precioso</h1>
+        <p>Como um filtro de água está transformando a realidade de milhares de ribeirinhos no Amazonas.</p>
+    </div>
+
+    <div class="container">
+        <div class="article-card">
+            <img src="fotos/agua.jpg" alt="Comunidade ribeirinha" class="main-photo">
+            
+            <div class="article-content">
+                <p>Quando Dona Maria de Fatima, 67 anos, abre a porta de sua casa de madeira na comunidade de São Sebastião do Içá, ela segura com duas mãos um balde plástico de 20 litros. Dentro, uma água turva, amarronzada. É dessa água - que ela mesma pegou no rio há três dias - que toda a família bebe, cozinha e lava roupas.</p>
+
+                <p>Durante seis meses, nossa equipe percorreu comunidades ribeirinhas. O que encontramos vai além da pobreza material. Identificamos um inimigo invisível e mortífero: a água contaminada.</p>
+
+                <div class="highlight-box">
+                    <h4>A Realidade da Saúde</h4>
+                    <ul>
+                        <li><strong>Diarreia Aguda:</strong> 1ª causa de morte de crianças até 5 anos na região.</li>
+                        <li><strong>Doenças Comuns:</strong> Cólera, Hepatite A e diversas parasitoses intestinais.</li>
+                        <li><strong>Impacto:</strong> Alto índice de evasão escolar e internações evitáveis.</li>
+                    </ul>
+                </div>
+
+                <p>O programa de Missões nasceu de uma visão simples: se não podemos levar água encanada até essas comunidades isoladas, levaremos a tecnologia de purificação.</p>
+
+                <div class="quote-block">
+                    "Não levamos apenas um filtro. Levamos dignidade, saúde e a mensagem de que eles não estão esquecidos."
+                </div>
+
+                <p>Em menos de um ano, mais de 200 filtros foram distribuídos. São mais de 2.000 pessoas que agora têm acesso a água LIMPA e SEGURA para o consumo diário.</p>
+
+                <div class="donation-call">
+                    <h3>Transforme uma Vida Hoje</h3>
+                    <p>Cada filtro atende uma família e dura anos. Ajude-nos a levar água limpa!</p>
+                    <span class="price" style="font-size: 1.4rem;">Contribua a partir de R$ 10,00</span>
+                    <a href="doacoes.html" class="btn-cta">Quero Ajudar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">IEADBAM TEFÉ</div>
+            <div class="footer-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#quem-somos">Quem Somos</a>
+                <a href="index.html#eventos">Eventos</a>
+                <a href="doacoes.html">Doações</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com/ieadbam_tefe" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:contato@ieadbastefe.com.br" class="gmail"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/5592999999999" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 IEADBAM Tefé. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

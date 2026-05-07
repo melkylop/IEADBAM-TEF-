@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda completa de eventos, cultos e celebrações da IEADBAM Tefé. Fique por dentro de tudo o que acontece em nossa comunidade.">
+    <title>Eventos | IEADBAM Tefé</title>
+    <link rel="icon" type="image/png" href="fotos/igrejalogo.jpeg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Merriweather:wght@400;500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2e8b57;
+            --primary-dark: #1e5a38;
+            --accent: #ffd700;
+            --bg: #f8f8f8;
+            --text: #444;
+        }
+        body { font-family: 'Merriweather', Georgia, serif; background: var(--bg); color: var(--text); }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .page-header .btn-back {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .page-header .btn-back:hover { background: #fff; color: var(--primary); }
+        
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .event-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s;
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+        .event-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        
+        .event-image {
+            width: 100%;
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+        .event-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+        .event-card:hover .event-image img { transform: scale(1.1); }
+        
+        .event-date-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .event-info { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .event-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary); margin-bottom: 15px; }
+        .event-info p { font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 20px; }
+        
+        .event-meta {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .event-meta i { color: var(--primary); margin-right: 8px; width: 16px; text-align: center; }
+        
+        .featured-tag {
+            background: #e74c3c;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .events-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <h1>Eventos e Agenda</h1>
+        <p>Junte-se a nós em celebrações, estudos e momentos de comunhão.</p>
+    </div>
+
+    <div class="container">
+        <div class="events-grid">
+            <!-- Evento de Destaque: Aniversário -->
+            <div class="event-card" style="border: 2px solid var(--accent);">
+                <div class="event-image">
+                    <img src="fotos/igrejalogo.jpeg" alt="Logo oficial da IEADBAM Tefé representando o aniversário da instituição" loading="lazy">
+                    <div class="event-date-tag" style="background: var(--primary); color: #fff;">14 & 15 NOV</div>
+                </div>
+                <div class="event-info">
+                    <span class="featured-tag" style="background: var(--accent); color: var(--primary-dark);">Grande Celebração</span>
+                    <h3>Aniversário da Igreja - 2026</h3>
+                    <p>Venha celebrar conosco mais um ano de vitórias e bênçãos! Uma programação especial com convidados e momentos inesquecíveis de gratidão a Deus.</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> Sáb às 19h | Dom às 18h</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Templo Central IEADBAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 1 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="fotos/rutediamae.jpeg" alt="Grupo de mães da igreja sendo homenageadas no altar" loading="lazy">
+                    <div class="event-date-tag">10 MAIO</div>
+                </div>
+                <div class="event-info">
+                    <span class="featured-tag">Especial</span>
+                    <h3>Culto do Dia das Mães</h3>
+                    <p>Uma celebração emocionante dedicada a honrar todas as mães da nossa comunidade com música, homenagens e uma palavra especial.</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 19:00h</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Templo Central IEADBAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="fotos/pexels-shelaghmurphy-1666816.jpg" alt="Família reunida orando durante o culto dominical" loading="lazy">
+                    <div class="event-date-tag">DOMINGOS</div>
+                </div>
+                <div class="event-info">
+                    <h3>Culto da Família</h3>
+                    <p>O momento semanal onde nos reunimos como corpo de Cristo para fortalecer os laços familiares através da fé e do louvor.</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 19:00h</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Templo Central IEADBAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="fotos/batismo.jpg" alt="Pessoas ouvindo atentamente à lição bíblica em sala de aula" loading="lazy">
+                    <div class="event-date-tag">SÁBADOS</div>
+                </div>
+                <div class="event-info">
+                    <h3>Discipulado e Diaconato</h3>
+                    <p>Treinamento e formação para aqueles que desejam aprofundar seu conhecimento bíblico e servir na obra do Senhor.</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 18:00h</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Sala de Treinamento</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evento 4 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="fotos/Just Game.png" alt="Controle de videogame sobre uma mesa, representando o evento de games" loading="lazy">
+                    <div class="event-date-tag">PRÓX. SÁBADO</div>
+                </div>
+                <div class="event-info">
+                    <span class="featured-tag" style="background: #3498db;">Jovens</span>
+                    <h3>Santo Rolê - Games</h3>
+                    <p>Uma noite de muita diversão, games e comunhão para a juventude. Traga seu controle e venha participar!</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 19:30h</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Salão de Eventos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 5 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="fotos/Cinema.png" alt="Projeção de filme em tela grande com pessoas assistindo" loading="lazy">
+                    <div class="event-date-tag">MENSAL</div>
+                </div>
+                <div class="event-info">
+                    <span class="featured-tag" style="background: #9b59b6;">Cultura</span>
+                    <h3>Cine IEADBAM</h3>
+                    <p>Sessão de cinema com pipoca e uma mensagem inspiradora para toda a família. Uma experiência marcante para todas as idades.</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 19:00h</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Auditório Central</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evento 6 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="fotos/musica.jpg" alt="Alunos ensaiando instrumentos musicais na Escola de Davi" loading="lazy">
+                    <div class="event-date-tag">EM BREVE</div>
+                </div>
+                <div class="event-info">
+                    <h3>Workshop de Música</h3>
+                    <p>Uma oficina prática para músicos e cantores que desejam aprimorar seus talentos na Escola de Davi.</p>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> A definir</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Auditório Central</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">IEADBAM TEFÉ</div>
+            <div class="footer-copyright">
+                &copy; 2026 IEADBAM Tefé. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

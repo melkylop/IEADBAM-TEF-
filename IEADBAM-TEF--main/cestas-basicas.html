@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEADBAM Tefé - 5 Pães e 2 Peixinhos</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Merriweather:wght@400;500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2e8b57;
+            --primary-dark: #1e5a38;
+            --accent: #ffd700;
+            --bg: #f8f8f8;
+            --text: #444;
+            --text-light: #777;
+        }
+        body { font-family: 'Merriweather', Georgia, serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .page-header .btn-back {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .page-header .btn-back:hover { background: #fff; color: var(--primary); }
+        
+        .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.05rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+        
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+        }
+        
+        .main-photo {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .article-content { font-size: 1.05rem; color: var(--text); }
+        .article-content p { margin-bottom: 25px; text-align: justify; }
+        
+        .highlight-box { 
+            background: #fdfaf0; 
+            border-left: 4px solid var(--accent); 
+            padding: 25px; 
+            margin: 30px 0; 
+            border-radius: 0 10px 10px 0; 
+        }
+        .highlight-box h4 { color: #b8860b; font-size: 1.2rem; margin-bottom: 15px; }
+        .highlight-box ul { margin-left: 20px; }
+        .highlight-box li { margin-bottom: 10px; }
+        
+        .quote-block { 
+            font-family: 'Playfair Display', serif; 
+            font-style: italic; 
+            font-size: 1.2rem; 
+            color: var(--primary); 
+            text-align: center; 
+            padding: 30px; 
+            margin: 40px 0; 
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .donation-call { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+            color: #fff; 
+            padding: 40px; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin: 40px 0; 
+        }
+        .donation-call h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; }
+        .donation-call p { text-align: center; margin-bottom: 10px; }
+        .donation-call .price { font-size: 1.8rem; font-weight: 700; color: var(--accent); display: block; margin: 15px 0; }
+        
+        .btn-cta {
+            background: #fff;
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+
+        footer { background: var(--bg-dark); color: white; padding: 40px 20px; text-align: center; }
+        .footer-content { max-width: 800px; margin: 0 auto; }
+        .footer-logo { font-family: 'Cinzel', serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--accent); }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .social-icons { display: flex; justify-content: center; gap: 18px; margin: 25px 0; }
+        .social-icons a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+        .footer-copyright { font-size: 0.85rem; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px; }
+        
+        @media (max-width: 600px) {
+            .page-header { padding: 80px 20px 40px; }
+            .page-header h1 { font-size: 1.8rem; }
+            .article-card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <a href="acoes-sociais.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <h1>5 Pães e 2 Peixinhos</h1>
+        <p>Levando o milagre do alimento às famílias que mais precisam em Tefé e comunidades vizinhas.</p>
+    </div>
+
+    <div class="container">
+        <div class="article-card">
+            <img src="fotos/cesta.webp" alt="Distribuição de Cestas Básicas" class="main-photo">
+            
+            <div class="article-content">
+                <p>Inspirado no milagre da multiplicação operado por Jesus, o projeto "5 Pães e 2 Peixinhos" nasceu com o objetivo de combater a insegurança alimentar em nossa região. No coração da Amazônia, onde o acesso a itens básicos pode ser um desafio logístico e financeiro, nossa igreja se torna o braço estendido de Deus para socorrer quem tem fome.</p>
+
+                <p>Mensalmente, nossa equipe de voluntários prepara e distribui cestas básicas completas, cuidadosamente montadas para suprir as necessidades nutricionais de uma família por um mês inteiro. Mais do que alimento físico, entregamos esperança e a certeza de que a comunidade cristã está atenta às suas necessidades.</p>
+
+                <div class="highlight-box">
+                    <h4>O Impacto do Projeto</h4>
+                    <ul>
+                        <li><strong>Cestas Básicas:</strong> Mais de 2.000 cestas distribuídas anualmente.</li>
+                        <li><strong>Alcance:</strong> Atendemos famílias na zona urbana de Tefé e em mais de 15 comunidades ribeirinhas.</li>
+                        <li><strong>Suporte Contínuo:</strong> Acompanhamento das famílias em situação de vulnerabilidade extrema.</li>
+                    </ul>
+                </div>
+
+                <p>O milagre da multiplicação acontece através da sua generosidade. Quando você doa, seus "peixinhos" se multiplicam e chegam à mesa de quem, muitas vezes, não teria o que comer no dia seguinte.</p>
+
+                <div class="quote-block">
+                    "Porque tive fome, e destes-me de comer; tive sede, e destes-me de beber; era estrangeiro, e hospedastes-me." (Mateus 25:35)
+                </div>
+
+                <p>Nossa meta é expandir o projeto para alcançar mais 10 comunidades isoladas até o final deste ano. Com sua ajuda, nenhum prato ficará vazio em nossa região.</p>
+
+                <div class="donation-call">
+                    <h3>Multiplique essa Esperança</h3>
+                    <p>Cada contribuição, por menor que seja, ajuda a levar alimento para quem tem fome.</p>
+                    <span class="price" style="font-size: 1.4rem;">Contribua a partir de R$ 10,00</span>
+                    <a href="doacoes.html" class="btn-cta">Quero Ajudar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">IEADBAM TEFÉ</div>
+            <div class="footer-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#quem-somos">Quem Somos</a>
+                <a href="index.html#eventos">Eventos</a>
+                <a href="doacoes.html">Doações</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com/ieadbam_tefe" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:contato@ieadbastefe.com.br" class="gmail"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/5592999999999" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 IEADBAM Tefé. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

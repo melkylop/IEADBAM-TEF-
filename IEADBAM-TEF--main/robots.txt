@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ieadbamtefe.com.br/sitemap.xml
